@@ -23,6 +23,7 @@ jobs:
         run: mvn clean install
      
   docker-build:
+     needs: build
      runs-on: ubuntu-latest
      steps:
       - uses: mr-smithers-excellent/docker-build-push@v6
